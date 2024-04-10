@@ -30,6 +30,7 @@
     "eslint-plugin-sonarjs": "^0.25.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "logixlysia": "^3.1.0",
     "prettier": "^3.2.5"
   },
   "lint-staged": {

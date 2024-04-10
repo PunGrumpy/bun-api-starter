@@ -1,10 +1,10 @@
 import swagger from '@elysiajs/swagger';
 import { Elysia } from 'elysia';
+import { logger } from 'logixlysia';
 
 import config from './config';
 import * as db from './config/db';
 import errorPlugin from './plugins/error';
-import loggerPlugin from './plugins/logger';
 import securityPlugin from './plugins/security';
 import authRoutes from './routes/auth';
 import protectedRoutes from './routes/protected';
@@ -14,7 +14,7 @@ export const app = new Elysia();
 db.connect();
 
 app
-  .use(loggerPlugin)
+  .use(logger())
   .use(securityPlugin)
   .use(errorPlugin)
   .use(
