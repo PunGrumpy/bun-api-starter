@@ -1,0 +1,27 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  plugins: ['sonarjs', 'simple-import-sort', 'jsdoc'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:jsdoc/recommended-typescript'
+  ],
+  rules: {
+    'no-error-on-unmatched-pattern': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'sonarjs/cognitive-complexity': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'simple-import-sort/imports': 'warn',
+    'jsdoc/no-types': 'off',
+    'jsdoc/tag-lines': 'off',
+    'jsdoc/require-returns-description': 'off'
+  }
+};
