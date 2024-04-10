@@ -5,9 +5,11 @@
     "test": "NODE_ENV=test bun test ./test/**.test.ts",
     "dev": "bun run --watch src/index.ts",
     "start": "bun run src/index.ts",
-    "pretty": "prettier --write \"**/*.{ts,js}\"",
+    "pretty": "prettier --write .",
     "lint": "eslint **/*.ts --no-warn-ignored",
-    "lint:fix": "eslint **/*.ts --no-warn-ignored --fix"
+    "lint:fix": "eslint **/*.ts --no-warn-ignored --fix",
+    "lint:staged": "lint-staged",
+    "prepare": "husky"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.0.2",
@@ -32,12 +34,6 @@
     "lint-staged": "^15.2.2",
     "logixlysia": "^3.1.0",
     "prettier": "^3.2.5"
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
   },
   "module": "src/index.ts"
 }
