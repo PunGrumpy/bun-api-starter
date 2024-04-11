@@ -9,7 +9,7 @@
     "lint": "eslint **/*.ts --no-warn-ignored",
     "lint:fix": "eslint **/*.ts --no-warn-ignored --fix",
     "lint:staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "[[ -d .git && ! -e .gitignore ]] && husky|| true"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.0.2",
